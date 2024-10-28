@@ -8,6 +8,7 @@
         { "src": "/build/(.*)", "dest": "/public/build/$1" },
         { "src": "/firebase-messaging-sw.js", "dest": "/public/firebase-messaging-sw.js" },
         { "src": "/manifest.json", "dest": "/public/manifest.json" },
+        { "src": "/service-worker.js", "dest": "/public/service-worker.json" },
         { "src": "/(.*)", "dest": "/api/index.php" }
     ],
     "public": true,
