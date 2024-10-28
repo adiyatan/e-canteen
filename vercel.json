@@ -6,6 +6,7 @@
     },
     "routes": [
         { "src": "/build/(.*)", "dest": "/public/build/" },
+        { "src": "/firebase-messaging-sw.js", "dest": "/public/firebase-messaging-sw.js" },
         { "src": "/(.*)", "dest": "/api/index.php" }
     ],
     "public": true,
