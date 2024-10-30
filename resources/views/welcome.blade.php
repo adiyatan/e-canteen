@@ -1,14 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Get Device Token</title>
-    <!-- Firebase SDK versi 8 -->
     <link rel="manifest" href="/manifest.json">
+
+    <!-- Firebase SDK versi 8 -->
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-messaging.js"></script>
+
+    <!-- Content Security Policy -->
+    <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self'; 
+                   script-src 'self' 'unsafe-inline' https://www.gstatic.com https://www.googleapis.com; 
+                   connect-src 'self' https://fcm.googleapis.com; 
+                   img-src 'self' data: https://www.gstatic.com https://www.googleapis.com; 
+                   style-src 'self' 'unsafe-inline';
+                   frame-src https://www.gstatic.com; 
+                   font-src 'self' data:;">
+
 </head>
+
 <body>
     <h1>Get Device Token</h1>
     <button id="generateTokenButton">Get Token</button>
@@ -60,4 +74,5 @@
         };
     </script>
 </body>
+
 </html>
