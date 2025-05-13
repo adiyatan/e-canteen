@@ -13,13 +13,7 @@
 
     <!-- Content Security Policy -->
     <meta http-equiv="Content-Security-Policy"
-        content="default-src 'self'; 
-                   script-src 'self' 'unsafe-inline' https://www.gstatic.com https://www.googleapis.com; 
-                   connect-src 'self' https://fcm.googleapis.com; 
-                   img-src 'self' data: https://www.gstatic.com https://www.googleapis.com; 
-                   style-src 'self' 'unsafe-inline';
-                   frame-src https://www.gstatic.com; 
-                   font-src 'self' data:;">
+        content="script-src 'self' 'unsafe-eval' 'unsafe-inline'; object-src 'self'; style-src 'self' 'unsafe-inline'; media-src *">
 
 </head>
 
@@ -31,12 +25,13 @@
     <script>
         // Firebase configuration
         const firebaseConfig = {
-            apiKey: "AIzaSyAeaAyOKdqIj0cIm6wcyAuBwQEuZ3xhcg8",
-            authDomain: "e-canteen-f49a4.firebaseapp.com",
-            projectId: "e-canteen-f49a4",
-            storageBucket: "e-canteen-f49a4.appspot.com",
-            messagingSenderId: "592903681353",
-            appId: "1:592903681353:web:9746c7ffc0dc9b5c179698"
+            apiKey: "AIzaSyBfapZbLiO-9VX8tjUWe1Ta4Fe4W8LS-t0",
+            authDomain: "pasfood-a8378.firebaseapp.com",
+            projectId: "pasfood-a8378",
+            storageBucket: "pasfood-a8378.firebasestorage.app",
+            messagingSenderId: "969399377196",
+            appId: "1:969399377196:web:b1eb9d6816a4d60d87a089",
+            measurementId: "G-2T9HYQH8Y5"
         };
 
         // Initialize Firebase
@@ -63,7 +58,7 @@
 
                 // Generate token
                 const token = await messaging.getToken({
-                    vapidKey: 'BPkyKSPmAASZBoL-2OaOeMTrzjVRcGV3yV4TPe4SOT1f5Ggj6g7g0U0GpQpZL0X8OpRdHjRWUF57OrMiLKqK4OE' // Ganti dengan VAPID key dari Firebase Console
+                    vapidKey: 'BFrSzOSpxrnaj2qumct3zkTSq5mSuX9W1f-7vKn6F_upo2FinbBk3F32tgv2gwo8eHjKoP3zghR5dgAGBb1H0Tw' // Ganti dengan VAPID key dari Firebase Console
                 });
 
                 document.getElementById('tokenDisplay').innerText = `Device Token: ${token}`;
